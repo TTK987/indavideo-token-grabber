@@ -1,8 +1,5 @@
 """
-Simple Indavideo.hu embed token generator
-
-Logic from yt_dlp ( github.com/yt-dlp/yt-dlp )
-
+Simple Indavideo.hu embed token grabber
 """
 
 # Required Libraries
@@ -11,11 +8,11 @@ import requests
 import re
 import time
 
-# Function to generate Indavideo token
-def generate_indavideo_token(url: str):
+# Function to get token from indavideo URL
+def get_indavideo_token(url: str):
     """
-    Generate urls to video files with token for indavideo.hu embed URLs
-    :param url: indavideo URL (embed or video page)
+    Get token from indavideo.hu embed URL
+    :param url: indavideo.hu embed URL
     :return: Dictionary of urls to video files with token {height <int>: url <str>}
     """
     # Extract video ID from URL
@@ -54,4 +51,4 @@ def generate_indavideo_token(url: str):
 
     return tokens
 
-print(generate_indavideo_token('https://embed.indavideo.hu/player/video/eac6d340e3?autostart=1&hide=titleshare&hq=1')) # Example URL
+print(get_indavideo_token('https://embed.indavideo.hu/player/video/eac6d340e3?autostart=1&hide=titleshare&hq=1'))
