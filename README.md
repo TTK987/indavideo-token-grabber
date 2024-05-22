@@ -1,2 +1,2 @@
-# indavideo-token-generator
-Simple Indavideo.hu token generator
+# indavideo-token-grabber
+Simple Indavideo.hu token grabber from embed links
